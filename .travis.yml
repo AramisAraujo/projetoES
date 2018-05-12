@@ -18,8 +18,8 @@ env:
 
 install:
   - cd myApp/ && npm install -g gulp bower cordova ionic firebase
-  - cd myApp/ && npm install
-  - cd myApp/ && bower update
+  - npm install
+  - bower update
 
 before_script:
   - wget http://dl.google.com/android/android-sdk_r24.4-linux.tgz
