@@ -6,6 +6,9 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from './../pages/login/login';
+import { PerfilProjetoPage } from '../pages/perfil-projeto/perfil-projeto';
+import { PerfilUsuarioPage } from '../pages/perfil-usuario/perfil-usuario';
+import { WelcomePage } from '../pages/welcome/welcome';
 
 
 import { CommonModule } from '@angular/common';
@@ -18,13 +21,14 @@ import { AngularFireAuthModule } from  'angularfire2/auth';
 
 import { GooglePlus } from '@ionic-native/google-plus';
 import { GoogleLoginComponent } from './../components/google-login/google-login';
-import { PerfilProjetoPage } from '../pages/perfil-projeto/perfil-projeto';
 import { TarefasComponent } from '../components/tarefas/tarefas';
 import { GraficosComponent } from '../components/graficos/graficos';
 import { SobreComponent } from '../components/sobre/sobre';
 import { ColaboradoresComponent } from '../components/colaboradores/colaboradores';
-import { PerfilUsuarioPage } from '../pages/perfil-usuario/perfil-usuario';
 import { Camera } from '@ionic-native/camera';
+import { IonicStorageModule } from '@ionic/storage';
+
+import { ConfigProvider } from '../providers/config/config';
 
 export const firebaseConfig = {
   apiKey: "AIzaSyCxIg5B8z2F531HyxDiKSprhF-P4ueDi7Y",
@@ -39,14 +43,15 @@ export const firebaseConfig = {
   declarations: [
     MyApp,
     GoogleLoginComponent,
-    LoginPage,
-    HomePage,
-    PerfilProjetoPage,
+    ColaboradoresComponent,
     TarefasComponent,
-    PerfilProjetoPage,
     GraficosComponent,
     SobreComponent,
-    ColaboradoresComponent,
+    LoginPage,
+    HomePage,
+    WelcomePage,
+    PerfilProjetoPage,
+    PerfilProjetoPage,
     PerfilUsuarioPage
   ],
   imports: [
@@ -56,20 +61,23 @@ export const firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule,
     AngularFireAuthModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot()
+
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
     GoogleLoginComponent,
-    LoginPage,
-    PerfilProjetoPage,
     TarefasComponent,
-    PerfilProjetoPage,
     GraficosComponent,
-    SobreComponent,
     ColaboradoresComponent,
+    SobreComponent,
+    HomePage,
+    LoginPage,
+    WelcomePage,
+    PerfilProjetoPage,
+    PerfilProjetoPage,
     PerfilUsuarioPage
 
   ],
@@ -78,7 +86,8 @@ export const firebaseConfig = {
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    Camera
+    Camera,
+    ConfigProvider
   ]
 })
 export class AppModule {}
