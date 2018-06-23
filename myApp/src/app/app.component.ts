@@ -4,9 +4,9 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { WelcomePage } from '../pages/welcome/welcome';
-import { LoginPage } from '../pages/login/login';
 
 import { ConfigProvider } from '../providers/config/config';
+import { HomePage } from '../pages/home/home';
 
 @Component({
   templateUrl: 'app.html',
@@ -31,7 +31,7 @@ export class MyApp {
         this.rootPage = WelcomePage;
         configProvider.setConfigData(false);
       } else {
-        this.rootPage = LoginPage;
+        this.rootPage = HomePage;
       }
 
       console.log(config);

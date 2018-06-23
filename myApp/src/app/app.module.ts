@@ -5,7 +5,6 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { LoginPage } from './../pages/login/login';
 import { PerfilProjetoPage } from '../pages/perfil-projeto/perfil-projeto';
 import { PerfilUsuarioPage } from '../pages/perfil-usuario/perfil-usuario';
 import { WelcomePage } from '../pages/welcome/welcome';
@@ -47,7 +46,6 @@ export const firebaseConfig = {
     TarefasComponent,
     GraficosComponent,
     SobreComponent,
-    LoginPage,
     HomePage,
     WelcomePage,
     PerfilProjetoPage,
@@ -74,7 +72,6 @@ export const firebaseConfig = {
     ColaboradoresComponent,
     SobreComponent,
     HomePage,
-    LoginPage,
     WelcomePage,
     PerfilProjetoPage,
     PerfilProjetoPage,
