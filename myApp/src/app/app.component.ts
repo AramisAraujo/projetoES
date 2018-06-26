@@ -7,6 +7,10 @@ import { WelcomePage } from '../pages/welcome/welcome';
 
 import { ConfigProvider } from '../providers/config/config';
 import { HomePage } from '../pages/home/home';
+import { PerfilProjetoPage } from '../pages/perfil-projeto/perfil-projeto';
+import { PerfilUsuarioPage } from '../pages/perfil-usuario/perfil-usuario';
+import { NotificacoesPage } from '../pages/notificacoes/notificacoes';
+
 
 @Component({
   templateUrl: 'app.html',
@@ -41,4 +45,3 @@ export class MyApp {
     });
   }
 }
-
